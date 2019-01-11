@@ -20,6 +20,7 @@
     <title>Red Ball Survey</title>
     <link href="rb_reset.css" rel="stylesheet" />
     <link href="rb_styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="rb_forms.css">
     <script src="rb_formsubmit.js"></script>
 </head>
 
@@ -67,11 +68,15 @@
                 </div>
                 <div class="formrow">
                     <label for="city">City</label>
-                    <input name="custCity" id="city" type="text" placeholder="City" />
+                    <input name="custCity" id="city" type="text" value="Ormond Beach" />
+                </div>
+                <div class="formrow">
+                    <label for="state">state</label>
+                    <input name="custState" id="state" type="text" value="FL" />
                 </div>
                 <div class="formrow">
                     <label for="zip">Postal Code</label>
-                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnnn)" />
+                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" />
                 </div>
                 <div class="formrow">
                     <label for="phone">Phone Number</label>
@@ -79,15 +84,34 @@
                 </div>
                 <div class="formrow">
                     <label for="mail">Email*</label>
-                    <input name="custEmail" id="mail" type="email" placeholder="Email" />
+                    <input name="custEmail" id="mail" type="email" placeholder="email@example.com" />
                 </div>
+                <div class="formrow">
+                    <label for="Info">Where did you hear about us? <br>(select all that apply)</label>
+                    <select name="infosrc" id="info" size="5" multiple>
+                        <option value="internet">Internet</option>
+                        <option value="mag">Magazine</option>
+                        <option value="news">News</option>
+                        <option value="word of mouth">Word of mouth</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="formrow">
+                    <label for="dinespin">How many times do you dine out per month?</label>
+                    <input name="dineout" id="dinespin" type="number" value="1" step="1" min="0" max="20">
+                </div>
+
+                <input name="mailme" id="mailcb" type="checkbox" value="yes">
+                <label for="mailcb">Add me to your mailing list for great coupons and specials!</label>
             </fieldset>
+
             <fieldset id="expInfo">
                 <legend>Share your experience at red ball pizza</legend>
                 <div class="formrow">
                     <label for="visit">Date of visit</label>
                     <input name="visitdate" id="visit" type="date">
                 </div>
+
                 <div class="formrow">
                     <label for="order">Order Type</label>
                     <select name="Order Type" id="order">
@@ -97,6 +121,7 @@
                         <option value="order 4">Take and Bake</option>
                     </select>
                 </div>
+
                 <div class="formrow">
                     <label>Was your service friendly?</label>
                     <fieldset class="optgroup">
@@ -106,6 +131,7 @@
                         <input name="sFriend" id="sNo" value="No" type="radio">
                     </fieldset>
                 </div>
+
                 <div class="formrow">
                     <label>Was your order correct?</label>
                     <fieldset class="optgroup">
@@ -115,6 +141,7 @@
                         <input name="ocorrect" id="cNo" value="No" type="radio">
                     </fieldset>
                 </div>
+
                 <div class="formrow">
                     <label> Was your food hot?</label>
                     <fieldset class="optgroup">
@@ -124,6 +151,7 @@
                         <input name="foodhot" id="hNo" value="No" type="radio">
                     </fieldset>
                 </div>
+
                 <div class="formrow">
                     <label for="rangeBox">Rate the overall service <br>
                         (0=poor; 10=great)
@@ -132,10 +160,7 @@
                     <input name="serviceRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10">
                     10
                 </div>
-                <div class="formrow">
-                    <label for="commBox">Tell us more about your experience!</label>
-                    <textarea name="custExp" id="commBox"></textarea>
-                </div>
+
                 <div class="formrow">
                     <label for="dish">What's your favorite dish?</label>
                     <input name="favDish" id="dish" type="text" list="dishType">
@@ -148,10 +173,13 @@
                         <option value="Pasto Artichoke Pizza" />
                     </datalist>
                 </div>
+
                 <div class="formrow">
-                    <label for="dinespin">How many times do you dine out per month?</label>
-                    <input name="dineout" id="dinespin" type="number" value="1" step="1" min="0" max="20">
+                    <label for="commBox">Tell us more about your experience!</label>
+                    <textarea name="custExp" id="commBox"></textarea>
                 </div>
+
+
 
 
 
