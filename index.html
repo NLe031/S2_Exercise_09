@@ -97,6 +97,18 @@
                     </select>
                 </div>
                 <div class="formrow">
+                    <label for="dish">What's your favorite dish?</label>
+                    <input name="favDish" id="dish" type="text" list="dishType">
+                    <datalist id="dishType">
+                        <option value="Antipasto Pizza" />
+                        <option value="Big Kahuna Pizza" />
+                        <option value="BBQ Chicken Pizza" />
+                        <option value="Mediterranean Herb Pizza" />
+                        <option value="Pasta Rolls" />
+                        <option value="Pesto Artichoke Pizza" />
+                    </datalist>
+                </div>
+                <div class="formrow">
                     <label for="dinespin">How many times do you dine out per month?</label>
                     <input name="dineout" id="dinespin" type="number" value="1" step="1" min="0" max="20">
                 </div>
@@ -161,26 +173,11 @@
                     10
                 </div>
 
-                <div class="formrow">
-                    <label for="dish">What's your favorite dish?</label>
-                    <input name="favDish" id="dish" type="text" list="dishType">
-                    <datalist id="dishType">
-                        <option value="Antipasto Pizza" />
-                        <option value="Big Kahuna Pizza" />
-                        <option value="BBQ Chicken Pizza" />
-                        <option value="Mediterranean Herb Pizza" />
-                        <option value="Pasta Rolls" />
-                        <option value="Pasto Artichoke Pizza" />
-                    </datalist>
-                </div>
-
-                <div class="formrow">
-                    <label for="commBox">Tell us more about your experience!</label>
-                    <textarea name="custExp" id="commBox"></textarea>
-                </div>
 
 
 
+                <label for="commBox">Tell us more about your experience!</label>
+                <textarea name="custExp" id="commBox"></textarea>
 
 
             </fieldset>
